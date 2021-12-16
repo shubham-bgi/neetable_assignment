@@ -1,10 +1,6 @@
 module.exports = {
-    createUser: require('./createUser'),
-    deleteUser: require('./deleteUser'),
-    updateUser: require('./updateUser'),
-    createJob: require('./createJob'),
-    deleteJob: require('./deleteJob'),
-    updateJob: require('./updateJob'),
-    filterJob: require('./filterJob'),
-    applyJob: require('./applyJob')
+    job: require('./job'),
+    user: require('./user'),
+    application: require('./application'),
+    upload: require('./upload')
 }

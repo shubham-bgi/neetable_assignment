@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../database/connection");
 
-module.exports = sequelize.define("apllications", {
+module.exports = sequelize.define("applications", {
     id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,

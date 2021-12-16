@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "77ce5fed-f75d-46a5-8f28-b17df6d711b3",
+		"name": "job application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Renu Aggarwal\",\r\n    \"email\": \"renu95@gmail.com\",\r\n    \"phone\": \"+91 8700769995\",\r\n    \"role\": \"Junior Frontend Developer\",\r\n    \"location\": \"Jaipur\",\r\n    \"profile\": \"profile\",\r\n    \"photo_url\": \"http://imgur.com/58746\",\r\n    \"skills\": \"React, UI/UX designer, Vanila JS\",\r\n    \"education\": \"Graduate\",\r\n    \"employment\": \"Tesla\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ev2005@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/user/Evlyn Simran Renjith",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"Evlyn Simran Renjith"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/user/Renu Aggarwal",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"Renu Aggarwal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Python Developer\",\r\n    \"company\" : \"Apple\",\r\n    \"location\" : \"Bengaluru\",\r\n    \"description\" : \"Position open for Python Developer\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/job",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Job",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Data Scientist\",\r\n    \"description\": \"Position open for Data Scientist, 3+ year xp required\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/job/Python Developer/Apple",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						"Python Developer",
+						"Apple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Job",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/job/Data Scientist/Apple",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						"Data Scientist",
+						"Apple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Job 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/job/?location=Delhi&name=Senior Software Architect",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						""
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Delhi"
+						},
+						{
+							"key": "name",
+							"value": "Senior Software Architect"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Job 2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/job/?location=Bengaluru",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						""
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Bengaluru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Job 3",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/job/?id=2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Job Pagenation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/job/page/?page=0&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						"page",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobName\": \"Senior Software Architect\",\r\n    \"userName\": \"Manish Rithaliya\",\r\n    \"ctc\": 500000,\r\n    \"ectc\": 600000,\r\n    \"description\": \"Looking for software dev\",\r\n    \"notice_period\": 7\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/application",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/F:/neetable_assignment/applications.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
